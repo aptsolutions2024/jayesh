@@ -1,0 +1,84 @@
+<?php
+error_reporting(0);
+session_start();
+include("../lib/connection/db-config.php");
+include("../lib/class/user-class.php");
+$userObj=new user();
+$comp_id=$_SESSION['comp_id'];
+$user_id=$_SESSION['log_id'];
+$clientid=$_REQUEST['clientid'];
+$filename=$_FILES["file"]["tmp_name"];
+
+	if($_FILES["file"]["size"] > 0)
+	{
+       $count=0;  
+		$file = fopen($filename, "r");
+	    while ($emapData = fgetcsv($file, 10000, ","))
+	    {
+			if($count!=0){
+        
+                 $dept = addslashes($emapData[12]);
+               ECHO "   dept ";
+        		 	   $dept_id=$userObj->getDeptIdemp($dept,$comp_id);
+                $qualif = addslashes($emapData[13]);
+				echo "   ***Qualif ";
+                 $qualif_id=$userObj->getQualifId($qualif,$comp_id);
+				 $bank = addslashes($emapData[16]); 
+				 echo "    bank - ";
+				  $bank_id=$userObj->getBankId($bank,$comp_id);
+				  //print_r($emapData);
+				   echo "hello".$emapData[4]."hello"; 
+				   if($emapData[4]!="" && $emapData[4]!=" "){
+					 $empdata4 = date('Y-m-d', strtotime(str_replace('/', '-', $emapData[4])));
+				   }else{
+					   $empdata4 = "0000-00-00";
+				   }
+				   if($emapData[5]!="" && $emapData[5]!=" "){
+					 $empdata5 = date('Y-m-d', strtotime(str_replace('/', '-', $emapData[5])));
+				   }else{
+					   $empdata5 = "";
+				   }
+				   if($emapData[6]!="" && $emapData[6]!=" "){
+					 $empdata6 = date('Y-m-d', strtotime(str_replace('/', '-', $emapData[6])));
+				   }else{
+					   $empdata6 = "0000-00-00";
+				   }
+				   if($emapData[7]!="" && $emapData[7]!=" "){
+					 $empdata7 = date('Y-m-d', strtotime(str_replace('/', '-', $emapData[7])));
+				   }else{
+					   $empdata7 = "0000-00-00";
+				   }
+				   if($emapData[8]!="" && $emapData[8]!=" "){
+					 $empdata8 = date('Y-m-d', strtotime(str_replace('/', '-', $emapData[8])));
+				   }else{
+					   $empdata8 = "0000-00-00";
+				   }
+				 //$emapData[4] = date('Y-m-d', strtotime(str_replace('/', '-', $emapData[4])));
+       
+if($emapData[1] !="" && $emapData[1] !=" "){
+echo $sql = "INSERT INTO  `employee`(`comp_id`, `user_id`,`first_name`,`middle_name`,`last_name`,`gender`,`bdate`,`joindate`,`due_date`,`leftdate`,`pfdate`,`pfno`,`esistatus`,`esino`,`dept_id`,`qualif_id`,`mobile_no`,`pay_mode`,`bank_id`,`bankacno`,`comp_ticket_no`,`panno`,`adharno`,`uan`,`married_status`,emp_add1,client_id) VALUES ('" .$comp_id  . "','" . $user_id . "','".addslashes($emapData[0])."','".addslashes($emapData[1])."','".addslashes($emapData[2])."',
+'".addslashes($emapData[3])."','".$empdata4."','".$empdata5."','',
+'','','".addslashes($emapData[9])."','".addslashes($emapData[10])."','".addslashes($emapData[11])."','".$dept_id."','".$qualif_id."','".addslashes($emapData[14])."','".addslashes($emapData[15])."','".$bank_id."','".addslashes($emapData[17])."',
+'".addslashes($emapData[18])."','".addslashes($emapData[19])."','".addslashes($emapData[20])."','".addslashes($emapData[21])."''".addslashes($emapData[22])."','".addslashes($emapData[23])."','".addslashes($emapData[24])."' ,'".$clientid."')";
+
+$result = mysql_query($sql);
+                echo '<br/>';
+}
+			}
+			$count++;
+	    } 
+
+		
+	    fclose($file);
+
+		if($count>1)
+		{
+			echo "<script type=\"text/javascript\">
+					alert(\"CSV File has been successfully Imported.\");
+ 				window.location = \"import-emp.php\"
+				</script>";
+			
+		}
+		
+	}	
+?>

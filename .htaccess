@@ -1,0 +1,669 @@
+RewriteEngine On 
+Options All -Indexes
+
+ 
+RewriteBase /
+
+php_value max_input_vars 6000
+php_value suhosin.post.max_vars 6000
+php_value suhosin.request.max_vars 6000
+
+
+RewriteRule ^home$ /index.php [L]
+RewriteRule ^logout$ /logout.php [L]
+RewriteRule ^sendmail$ /sendmail.php [L]
+RewriteRule ^login_process$ /login-process.php [L]
+RewriteRule ^paginate$ /paginate.php [L]
+
+RewriteRule ^user_home$ /user/index.php [L]
+RewriteRule ^add_arrears_process$ /user/add-arrears-process.php [L]
+RewriteRule ^add_bonus_cheque_details$ /user/add-bonus-cheque-details.php [L]
+RewriteRule ^add_cheque_details$ /user/add-cheque-details.php [L]
+RewriteRule ^add_comp_details_process$ /user/add-comp-details-process.php [L]
+RewriteRule ^add_employee_process$ /user/add-employee-process.php [L]
+RewriteRule ^add_employee$ /user/add-employee.php [L]
+	
+RewriteRule ^add_financial_year_process$ /user/add-financial-year-process.php [L]
+RewriteRule ^add_financial_year$ /user/add-financial-year.php [L]
+RewriteRule ^add_it_deposit_details_process$ /user/add-it-deposit-details-process.php [L]
+RewriteRule ^add_it_deposit_details$ /user/add-it-deposit-details.php [L]
+RewriteRule ^add_leave_cheque_details$ /user/add-leave-cheque-details.php [L]
+RewriteRule ^add_leave_process$ /user/add-leave-process.php [L]
+
+RewriteRule ^add_mast_advancetype_process$ /user/add-mast-advancetype-process.php [L]
+RewriteRule ^add_mast_advancetype$ /user/add-mast-advancetype.php [L]
+RewriteRule ^add_mast_bank_process$ /user/add-mast-bank-process.php [L]
+RewriteRule ^add_mast_bank$ /user/add-mast-bank.php [L]
+
+RewriteRule ^add_mast_client_employee_process$ /user/add-mast-client-employee-process.php [L]
+RewriteRule ^add_mast_client_employee$ /user/add-mast-client-employee.php [L]
+RewriteRule ^add_mast_client_process$ /user/add-mast-client-process.php [L]
+RewriteRule ^add_mast_client$ /user/add-mast-client.php [L]
+RewriteRule ^add_mast_deductionheads_process$ /user/add-mast-deductionheads-process.php [L]
+
+RewriteRule ^add_mast_deductionheads$ /user/add-mast-deductionheads.php [L]
+RewriteRule ^add_mast_department_process$ /user/add-mast-department-process.php [L]
+RewriteRule ^add_mast_department$ /user/add-mast-department.php [L]
+RewriteRule ^add_mast_designation_process$ /user/add-mast-designation-process.php [L]
+RewriteRule ^add_mast_designation$ /user/add-mast-designation.php [L]
+
+RewriteRule ^add_mast_incomehead_process$ /user/add-mast-incomehead-process.php [L]
+RewriteRule ^add_mast_incomehead$ /user/add-mast-incomehead.php [L]
+RewriteRule ^add_mast_leavetype_process$ /user/add-mast-leavetype-process.php [L]
+RewriteRule ^add_mast_leavetype$ /user/add-mast-leavetype.php [L]
+RewriteRule ^add_mast_location_process$ /user/add-mast-location-process.php [L]
+
+RewriteRule ^add_mast_location$ /user/add-mast-location.php [L]
+RewriteRule ^add_mast_payscalecode_process$ /user/add-mast-payscalecode-process.php [L]
+RewriteRule ^add_mast_payscalecode$ /user/add-mast-payscalecode.php [L]
+RewriteRule ^add_mast_qualification_process$ /user/add-mast-qualification-process.php [L]
+RewriteRule ^add_mast_qualification$ /user/add-mast-qualification.php [L]
+
+RewriteRule ^arrears$ /user/arrears.php [L]
+RewriteRule ^arrears_calc$ /user/arrears_calc.php [L]
+RewriteRule ^arrears_calc_new$ /user/arrears_calc_new.php [L]
+RewriteRule ^arrear_rate$ /user/arrear_rate.php [L]
+RewriteRule ^bank_leave_statement$ /user/bank-leave-statement.php [L]
+
+RewriteRule ^bank_statement_bonus$ /user/bank-statement-bonus.php [L]
+RewriteRule ^bank_statement$ /user/bank-statement.php [L]
+RewriteRule ^bank_deduction_letter$ /user/bank_deduction_letter.php [L]
+RewriteRule ^bonus_chklistdtl$ /user/bonus-chklistdtl.php [L]
+RewriteRule ^bonus_register$ /user/bonus-register.php [L]
+
+RewriteRule ^bonus_reports$ /user/bonus-reports.php [L]
+RewriteRule ^bonus_`statement$ /user/bonus-statement.php [L]
+RewriteRule ^bonus$ /user/bonus.php [L]
+RewriteRule ^bonus_chklistdtl$ /user/bonus_chklistdtl.php [L]
+RewriteRule ^calculation_bonus$ /user/calculation-bonus.php [L]
+
+RewriteRule ^calculation_bonus_old$ /user/calculation-bonus_old.php [L]
+RewriteRule ^check_leave_print_pre$ /user/check-leave-print-pre.php [L]
+RewriteRule ^check_print_pre$ /user/check-print-pre.php [L]
+RewriteRule ^chklistdtl$ /user/chklistdtl.php [L]
+RewriteRule ^days_details$ /user/days-details.php [L]
+
+RewriteRule ^delete_client_employee$ /user/delete-client-employee.php [L]
+RewriteRule ^delete_comp_details_process$ /user/delete-comp-details-process.php [L]
+RewriteRule ^delete_emp_advances_process$ /user/delete-emp-advances-process.php [L]
+RewriteRule ^delete_emp_deduct_process$ /user/delete-emp-deduct-process.php [L]
+RewriteRule ^delete_emp_income_process$ /user/delete-emp-income-process.php [L]
+
+RewriteRule ^delete_emp_leave_process$ /user/delete-emp-leave-process.php [L]
+RewriteRule ^delete_intax_allow_process$ /user/delete-intax-allow-process.php [L]
+RewriteRule ^delete_it_deposit_details_process$ /user/delete-it-deposit-details-process.php [L]
+RewriteRule ^delete_leave_record$ /user/delete-leave-record.php [L]
+RewriteRule ^delete_mast_advancetype_process$ /user/delete-mast-advancetype-process.php [L]
+
+RewriteRule ^delete_mast_bank_process$ /user/delete-mast-bank-process.php [L]
+RewriteRule ^delete_mast_client_process$ /user/delete-mast-client-process.php [L]
+RewriteRule ^delete_mast_deductionheads_process$ /user/delete-mast-deductionheads-process.php [L]
+RewriteRule ^delete_mast_department_process$ /user/delete-mast-department-process.php [L]
+RewriteRule ^delete_mast_designation_process$ /user/delete-mast-designation-process.php [L]
+
+
+RewriteRule ^delete_mast_incomehead_process$ /user/delete-mast-incomehead-process.php [L]
+RewriteRule ^delete_mast_leavetype_process$ /user/delete-mast-leavetype-process.php [L]
+RewriteRule ^delete_mast_location_process$ /user/delete-mast-location-process.php [L]
+RewriteRule ^delete_mast_payscalecode_process$ /user/delete-mast-payscalecode-process.php [L]
+RewriteRule ^delete_mast_qualification_process$ /user/delete-mast-qualification-process.php [L]
+
+RewriteRule ^delete_print_record$ /user/delete-print-record.php [L]
+RewriteRule ^dispDaysnew$ /user/dispDaysnew.php [L]
+RewriteRule ^display_all_employee$ /user/display-all-employee.php [L]
+RewriteRule ^display_appoint_employee$ /user/display-appoint-employee.php [L]
+RewriteRule ^display_emp_advance_data_process$ /user/display-emp-advance-data-process.php [L]
+
+
+RewriteRule ^display_emp_advance_data$ /user/display-emp-advance-data.php [L]
+RewriteRule ^display_emp_advances_details$ /user/display-emp-advances-details.php [L]
+RewriteRule ^display_emp_data$ /user/display-emp-data.php [L]
+RewriteRule ^display_emp_deduct_data$ /user/display-emp-deduct-data.php [L]
+RewriteRule ^display_emp_deduct_details$ /user/display-emp-deduct-details.php [L]
+
+RewriteRule ^display_emp_income_data$ /user/display-emp-income-data.php [L]
+RewriteRule ^display_emp_income_details$ /user/display-emp-income-details.php [L]
+RewriteRule ^display_emp_income_totalcont$ /user/display-emp-income-totalcont.php [L]
+RewriteRule ^display_emp_intax_allow$ /user/display-emp-intax-allow.php [L]
+RewriteRule ^display_emp_intax_c$ /user/display-emp-intax-c.php [L]
+
+RewriteRule ^arrears$ /user/arrears.php [L]
+
+RewriteRule ^display_emp_intax_chapter$ /user/display-emp-intax-chapter.php [L]
+RewriteRule ^display_emp_intax_income$ /user/display-emp-intax-income.php [L]
+RewriteRule ^display_emp_leave_details$ /user/display-emp-leave-details.php [L]
+RewriteRule ^display_emp_other_data_process$ /user/display-emp-other-data-process.php [L]
+RewriteRule ^display_employee_appoint$ /user/display-employee-appoint.php [L]
+
+RewriteRule ^display_employee$ /user/display-employee.php [L]
+RewriteRule ^display_employee1$ /user/display-employee1.php [L]
+RewriteRule ^display_employee2$ /user/display-employee2.php [L]
+RewriteRule ^display_employee3$ /user/display-employee3.php [L]
+RewriteRule ^display_employee_org$ /user/display-employee_org.php [L]
+
+RewriteRule ^display_intax_employee$ /user/display-intax-employee.php [L]
+RewriteRule ^display_monthval$ /user/display-monthval.php [L]
+RewriteRule ^display_other_fields_data$ /user/display-other-fields-data.php [L]
+RewriteRule ^display_search_client$ /user/display-search-client.php [L]
+
+RewriteRule ^display_tran_days$ /user/display-tran-days.php [L]
+RewriteRule ^display_tran_leave$ /user/display-tran-leave.php [L]
+RewriteRule ^edit_all_employee$ /user/edit-all-employee.php [L]
+RewriteRule ^edit_checkdetails$ /user/edit-checkdetails.php [L]
+
+RewriteRule ^add_mast_client$ /user/add-mast-client.php [L]
+
+#RewriteRule ^edit_comp_details/([^/]*)$ /user/edit-comp-details.php [L]
+
+
+RewriteRule ^edit_emp_advances$ /user/edit-emp-advances.php [L]
+RewriteRule ^edit_emp_deduct$ /user/edit-emp-deduct.php [L]
+RewriteRule ^edit_emp_income$ /user/edit-emp-income.php [L]
+RewriteRule ^edit_emp_leave$ /user/edit-emp-leave.php [L]
+RewriteRule ^edit_employee$ /user/edit-employee.php [L]
+
+RewriteRule ^edit_intax_allow$ /user/edit-intax-allow.php [L]
+RewriteRule ^edit_intax_c$ /user/edit-intax-c.php [L]
+RewriteRule ^edit_intax_chapter$ /user/edit-intax-chapter.php [L]
+RewriteRule ^edit_intax_employee$ /user/edit-intax-employee.php [L]
+RewriteRule ^edit_intax_income$ /user/edit-intax-income.php [L]
+
+RewriteRule ^edit_it_deposit_details/([^/]*)$ /user/edit-it-deposit-details.php [L]
+RewriteRule ^edit_mast_advancetype$ /user/edit-mast-advancetype.php [L]
+RewriteRule ^edit_mast_bank$ /user/edit-mast-bank.php [L]
+RewriteRule ^edit_mast_bank1$ /user/edit-mast-bank1.php [L]
+RewriteRule ^edit_mast_client_employee_process$ /user/edit-mast-client-employee-process.php [L]
+RewriteRule ^edit_mast_client_process$ /user/edit-mast-client-process.php [L]
+
+RewriteRule ^edit_mast_client$ /user/edit-mast-client.php [L]
+RewriteRule ^edit_mast_deductionheads$ /user/edit-mast-deductionheads.php [L]
+RewriteRule ^edit_mast_department$ /user/edit-mast-department.php [L]
+RewriteRule ^edit_mast_designation$ /user/edit-mast-designation.php [L]
+RewriteRule ^edit_mast_incomehead$ /user/edit-mast-incomehead.php [L]
+
+RewriteRule ^edit_mast_leavetype$ /user/edit-mast-leavetype.php [L]
+RewriteRule ^edit_mast_location$ /user/edit-mast-location.php [L]
+RewriteRule ^edit_mast_payscalecode$ /user/edit-mast-payscalecode.php [L]
+RewriteRule ^edit_mast_qualification$ /user/edit-mast-qualification.php [L]
+
+RewriteRule ^emerson_bill_process$ /user/emerson-bill-process.php [L]
+RewriteRule ^emerson_bill$ /user/emerson-bill.php [L]
+RewriteRule ^emerson_bil_oldl$ /user/emerson-bil_oldl.php [L]
+RewriteRule ^emerson_bill_new$ /user/emerson_bill_new.php [L]
+RewriteRule ^emerson_bill_new_excel$ /user/emerson_bill_new_excel.php [L]
+
+RewriteRule ^emerson_bill_new_r$ /user/emerson_bill_new_r.php [L]
+RewriteRule ^employee_advances_process$ /user/employee-advances-process.php [L]
+RewriteRule ^employee_deduct_process$ /user/employee-deduct-process.php [L]
+RewriteRule ^employee_income_process$ /user/employee-income-process.php [L]
+RewriteRule ^employee_leave_process$ /user/employee-leave-process.php [L]
+
+RewriteRule ^emp_pdf$ /user/emp_pdf.php [L]
+RewriteRule ^encashment_process$ /user/encashment-process.php [L]
+RewriteRule ^export_active_emp$ /user/export-active-emp.php [L]
+RewriteRule ^export_active_employee$ /user/export-active-employee.php [L]
+RewriteRule ^export_advance$ /user/export-advance.php [L]
+
+
+
+RewriteRule ^export_bank_format$ /user/export-bank-format.php [L]
+RewriteRule ^export_bank_format1$ /user/export-bank-format1.php [L]
+RewriteRule ^export_bank_format2$ /user/export-bank-format2.php [L]
+RewriteRule ^export_bank_format3$ /user/export-bank-format3.php [L]
+RewriteRule ^export_bank_format4$ /user/export-bank-format4.php [L]
+
+RewriteRule ^export_bank_neft_format$ /user/export-bank-neft-format.php [L]
+RewriteRule ^export_bonus_bank_transfer_format$ /user/export-bonus-bank-transfer-format.php [L]
+RewriteRule ^export_bank_transfer_format$ /user/export-bank-transfer-format.php [L]
+RewriteRule ^export_bonus_calculation$ /user/export-bonus-calculation.php [L]
+RewriteRule ^export_days_details$ /user/export-days-details.php [L]
+
+
+RewriteRule ^export_deduct$ /user/export-deduct.php [L]
+RewriteRule ^export_deductbk$ /user/export-deductbk.php [L]
+RewriteRule ^export_emerson_transfer_format$ /user/export-emerson-transfer-format.php [L]
+RewriteRule ^export_emp_data$ /user/export-emp-data.php [L]
+RewriteRule ^export_emp_deduct_page$ /user/export-emp-deduct-page.php [L]
+
+RewriteRule ^export_emp_deduct$ /user/export-emp-deduct.php [L]
+RewriteRule ^export_emp_income_page$ /user/export-emp-income-page.php [L]
+RewriteRule ^export_emp_income/([^/]*)$ /user/export-emp-income.php?cid=$1 [L]
+RewriteRule ^export_emp_page$ /user/export-emp-page.php [L]
+RewriteRule ^export_emp_transactions$ /user/export-emp-transactions.php [L]
+RewriteRule ^export_emp_day_transactions$ /user/export-emp-day-transactions.php [L]
+RewriteRule ^import-transactions-days$ /user/import-transactions-days.php [L]
+
+
+RewriteRule ^export_emp$ /user/export-emp.php [L]
+RewriteRule ^export_esi$ /user/export-esi.php [L]
+RewriteRule ^export_income$ /user/export-income.php [L]
+RewriteRule ^export_leave_bank_neft_format$ /user/export-leave-bank-neft-format.php [L]
+
+RewriteRule ^export_leave_bank_transfer_format$ /user/export-leave-bank-transfer-format.php [L]
+RewriteRule ^export_leave_emerson_transfer_format$ /user/export-leave-emerson-transfer-format.php [L]
+RewriteRule ^export_leave$ /user/export-leave.php [L]
+RewriteRule ^export_neft_letter_format$ /user/export-neft-letter-format.php [L]
+RewriteRule ^export_payslip$ /user/export-payslip.php [L]
+
+RewriteRule ^export_payslip1$ /user/export-payslip1.php [L]
+RewriteRule ^export_pf_left$ /user/export-pf-left.php [L]
+RewriteRule ^export_pf_newlyjoined$ /user/export-pf-newlyjoined.php [L]
+RewriteRule ^report_pf_statement_summary /user/report-pf-statement-summary.php [L]
+RewriteRule ^report_pf_statement_summary /user/report-pf-statement-summary.php [L]
+
+RewriteRule ^export_summerysheet$ /user/export-summerysheet.php [L]
+RewriteRule ^report_pf_stat_summary_page /reports/report-pf-stat-summary-page.php [L]
+
+RewriteRule ^export$ /user/export.php [L]
+RewriteRule ^exportallclient$ /user/exportallclient.php [L]
+RewriteRule ^exportalldepartment$ /user/exportalldepartment.php [L]
+RewriteRule ^exportallqualification$ /user/exportallqualification.php [L]
+RewriteRule ^exportalldesignation$ /user/exportalldesignation.php [L]
+RewriteRule ^exportalllocation$ /user/exportalllocation.php [L]
+RewriteRule ^exportallbank$ /user/exportallbank.php [L]
+RewriteRule ^exportallincomeheads$ /user/exportallincomeheads.php [L]
+RewriteRule ^exportalldeductionhead$ /user/exportalldeductionhead.php [L]
+RewriteRule ^exportallleavetype$ /user/exportallleavetype.php [L]
+RewriteRule ^exportalladvancetype$ /user/exportalladvancetype1.php [L]
+
+RewriteRule ^export_chequelist$ /user/export_chequelist.php [L]
+RewriteRule ^footer$ /user/footer.php [L]
+RewriteRule ^genrate_emerson_data_process$ /user/genrate-emerson-data-process.php [L]
+
+RewriteRule ^genrate_emerson_data_process_new$ /user/genrate-emerson-data-process_new.php [L]
+RewriteRule ^genrate_emerson_data_process_new1$ /user/genrate-emerson-data-process_new1.php [L]
+RewriteRule ^get_arreas_month-details$ /user/get-arreas-month-details.php [L]
+RewriteRule ^get_cheque_emp$ /user/get-cheque-emp.php [L]
+RewriteRule ^get_edit_client_employee_details$ /user/get-edit-client-employee-details.php [L]
+
+RewriteRule ^get_employee_byid_experience$ /user/get-employee-byid-experience.php [L]
+RewriteRule ^get_employee_byid$ /user/get-employee-byid.php [L]
+RewriteRule ^get_lattest_opening_date$ /user/get-lattest-opening-date.php [L]
+RewriteRule ^getdesignation$ /user/getdesignation.php [L]
+RewriteRule ^header$ /user/header.php [L]
+
+RewriteRule ^import_deduct$ /user/import-deduct.php [L]
+RewriteRule ^import_emp_deduct_process$ /user/import-emp-deduct-process.php [L]
+RewriteRule ^import_emp_income_process$ /user/import-emp-income-process.php [L]
+RewriteRule ^import_emp_process$ /user/import-emp-process.php [L]
+RewriteRule ^import_emp$ /user/import-emp.php [L]
+
+RewriteRule ^import_income$ /user/import-income.php [L]
+RewriteRule ^import_transactions_process$ /user/import-transactions-process.php [L]
+RewriteRule ^import_transactions$ /user/import-transactions.php [L]
+RewriteRule ^income_calculation$ /user/income-calculation.php [L]
+
+RewriteRule ^income_tax_calc$ /user/income-tax-calc.php [L]
+RewriteRule ^income_tax_calc11$ /user/income-tax-calc11.php [L]
+RewriteRule ^index$ /user/index.php [L]
+RewriteRule ^insert_leave_process$ /user/insert-leave-process.php [L]
+RewriteRule ^leave_chklistdtl$ /user/leave-chklistdtl.php [L]
+
+RewriteRule ^leave_detail_reports$ /user/leave-detail_reports.php [L]
+RewriteRule ^leave_encashment_details$ /user/leave-encashment-details.php [L]
+RewriteRule ^leave_encashment$ /user/leave-encashment.php [L]
+RewriteRule ^leave-list_report_1$ /user/leave-list-report-1.php [L]
+RewriteRule ^leave-list_reports$ /user/leave-list-reports.php [L]
+
+
+RewriteRule ^leave_reports$ /user/leave-reports.php [L]
+RewriteRule ^letters$ /user/letters.php [L]
+RewriteRule ^menu$ /user/menu.php [L]
+RewriteRule ^menuorg$ /user/menuorg.php [L]
+RewriteRule ^menu_test$ /user/menu_test.php [L]
+
+
+RewriteRule ^mis_paysheet$ /user/mis-paysheet.php [L]
+RewriteRule ^monthly_closing$ /user/monthly_closing.php [L]
+RewriteRule ^muster_book$ /user/muster-book.php [L]
+#RewriteRule ^new_1$ /user/new 1.php [L]
+
+
+
+
+RewriteRule ^opening_balance$ /user/opening-balance.php [L]
+RewriteRule ^opening_balancelist$ /user/opening_balancelist.php [L]
+RewriteRule ^paysheet_calc$ /user/paysheet_calc.php [L]
+RewriteRule ^pf_ecr_calc$ /user/pf_ecr_calc.php [L]
+RewriteRule ^print_client_deptwise_emersion_bill$ /user/print-client-deptwise-emersion-bill.php [L]
+
+RewriteRule ^print_deptdesgwise_emersion_bill$ /user/print-deptdesgwise-emersion-bill.php [L]
+RewriteRule ^print_deptwise-emersion_bill$ /user/print-deptwise-emersion-bill.php [L]
+RewriteRule ^print_deptwise_emerson_bill_new$ /user/print-deptwise-emerson-bill_new.php [L]
+RewriteRule ^print_dept_desgwise_emerson_bill_new$ /user/print-dept_desgwise-emerson-bill_new.php [L]
+RewriteRule ^print_dept_desgwise_emerson_bill_new2$ /user/print-dept_desgwise-emerson-bill_new2.php [L]
+
+
+RewriteRule ^print_summary_new$ /user/print_summary_new.php [L]
+RewriteRule ^report_advancelist$ /user/report-advancelist.php [L]
+RewriteRule ^report_advances$ /user/report-advances.php [L]
+
+
+RewriteRule ^report_adv_employee$ /user/report-adv_employee.php [L]
+RewriteRule ^report_bank_bonus$ /user/report-bank-bonus.php [L]
+RewriteRule ^report_bank_list$ /user/report-bank-list.php [L]
+RewriteRule ^report_bank_salary$ /user/report-bank-salary.php [L]
+RewriteRule ^report_bank$ /user/report-bank.php [L]
+
+RewriteRule ^report_bonus_cheque_printing$ /user/report-bonus-cheque-printing.php [L]
+RewriteRule ^report_bonus$ /user/report-bonus.php [L]
+RewriteRule ^report_cheque_list_bonus$ /user/report-cheque-list-bonus.php [L]
+RewriteRule ^report_cheque_list$ /user/report-cheque-list.php [L]
+
+RewriteRule ^report_cheque_printing$ /user/report-cheque-printing.php [L]
+RewriteRule ^report_contribution_esi_summary_statement$ /user/report-contribution-esi-summary-statement.php [L]
+RewriteRule ^report_contribution_esi_summery_statement$ /user/report-contribution-esi-summery-statement.php [L]
+RewriteRule ^report_dpaysheet$ /user/report-dpaysheet.php [L]
+RewriteRule ^report_email_payslip$ /user/report-email-payslip.php [L]
+
+RewriteRule ^report-esi-export$ /user/report-esi-export.php [L]
+
+
+RewriteRule ^report_esi_statement$ /user/report-esi-statement.php [L]
+RewriteRule ^report_esi_summery_statement$ /user/report-esi-summery-statement.php [L]
+RewriteRule ^report_esi$ /user/report-esi.php [L]
+RewriteRule ^report_export_payslip$ /user/report-export-payslip.php [L]
+RewriteRule ^report_form16$ /user/report-form16.php [L]
+
+RewriteRule ^report_form20$ /user/report-form20.php [L]
+RewriteRule ^report_form3a$ /user/report-form3a.php [L]
+RewriteRule ^report_format1_bonus$ /user/report-format1-bonus.php [L]
+RewriteRule ^report_format1$ /user/report-format1.php [L]
+RewriteRule ^report_format2$ /user/report-format2.php [L]
+
+
+RewriteRule ^report_format3$ /user/report-format3.php [L]
+RewriteRule ^report_format4$ /user/report-format4.php [L]
+RewriteRule ^report_gratuity$ /user/report-gratuity.php [L]
+RewriteRule ^report_gst_bill$ /user/report-gst-bill.php [L]
+RewriteRule ^report_gst_statement$ /user/report-gst-statement.php [L]
+
+RewriteRule ^report_leave_bank_salary$ /user/report-leave-bank-salary.php [L]
+RewriteRule ^report_leave_cheque_list$ /user/report-leave-cheque-list.php [L]
+RewriteRule ^report_leave_cheque_printing$ /user/report-leave-cheque-printing.php [L]
+RewriteRule ^report_leave_details_export$ /user/report-leave-details-export.php [L]
+RewriteRule ^report_leave_emerson_transfer$ /user/report-leave-emerson-transfer.php [L]
+
+
+RewriteRule ^report_leave_emerson$ /user/report-leave-emerson.php [L]
+RewriteRule ^report_leave_export$ /user/report-leave-export.php [L]
+RewriteRule ^report_leave_neft_letter$ /user/report-leave-neft-letter.php [L]
+RewriteRule ^report_leave_neft$ /user/report-leave-neft.php [L]
+RewriteRule ^report_leave_register$ /user/report-leave-register.php [L]
+
+RewriteRule ^report_leave_statement$ /user/report-leave-statement.php [L]
+RewriteRule ^report_leave_transfer$ /user/report-leave-transfer.php [L]
+RewriteRule ^report_leave_voucher$ /user/report-leave-voucher.php [L]
+RewriteRule ^report_leave$ /user/report-leave.php [L]
+RewriteRule ^report_letters$ /user/report-letters.php [L]
+
+
+RewriteRule ^report_lwf_statement$ /user/report-lwf-statement.php [L]
+RewriteRule ^report_lwf_summary$ /user/report-lwf-summary.php [L]
+RewriteRule ^report_lws$ /user/report-lws.php [L]
+RewriteRule ^report_mis_esi_pf$ /user/report-mis-esi-pf.php [L]
+RewriteRule ^report_mis$ /user/report-mis.php [L]
+
+
+RewriteRule ^report_neft_bonus$ /user/report-neft-bonus.php [L]
+RewriteRule ^report_neft_letter_bonus$ /user/report-neft-letter-bonus.php [L]
+RewriteRule ^report_neft_letter$ /user/report-neft-letter.php [L]
+RewriteRule ^report_neft$ /user/report-neft.php [L]
+
+
+RewriteRule ^report_paysheet-_printing$ /user/report-paysheet-printing.php [L]
+RewriteRule ^report_paysheet$ /user/report-paysheet.php [L]
+RewriteRule ^report_payslip_page$ /user/report-payslip-page.php [L]
+RewriteRule ^report_payslip$ /user/report-payslip.php [L]
+RewriteRule ^report_pf_code_summary$ /user/report-pf-code-summary.php [L]
+RewriteRule ^report_pf_code_summary1$ /reports/report-pf-code-summary.php [L]
+
+
+RewriteRule ^report_pf_form9$ /user/report-pf-form9.php [L]
+RewriteRule ^report_pf_left$ /user/report-pf-left.php [L]
+RewriteRule ^report_pf_newlyjoined$ /user/report-pf-newlyjoined.php [L]
+RewriteRule ^report_pf_statement-summary$ /user/report-pf-statement-summary.php [L]
+RewriteRule ^report_pf_statement$ /user/report-pf-statement.php [L]
+
+
+#RewriteRule ^report_profession_tax$ /user/report-pt.php [L]
+RewriteRule ^report_profession_tax$ /user/report-profession-tax.php [L]
+RewriteRule ^report_pt$ /user/report-pt.php [L]
+
+RewriteRule ^report_rand-payslip$ /user/report-rand-payslip.php [L]
+RewriteRule ^report_sal-summary$ /user/report-sal-summary.php [L]
+RewriteRule ^report_salary$ /user/report-salary.php [L]
+RewriteRule ^report_salary1$ /user/report-salary1.php [L]
+
+
+RewriteRule ^report_salarysummary1$ /user/report-salarysummary1.php [L]
+RewriteRule ^report_society_letter$ /user/report-society-letter.php [L]
+RewriteRule ^report_summery$ /user/report-summery.php [L]
+RewriteRule ^report_tax_invoice$ /user/report-tax-invoice.php [L]
+RewriteRule ^report_transfer_bonus$ /user/report-transfer-bonus.php [L]
+
+RewriteRule ^report_transfer$ /user/report-transfer.php [L]
+RewriteRule ^report_without_esi_summery_statement$ /user/report-without-esi-summery-statement.php [L]
+RewriteRule ^report_wpaysheet$ /user/report-wpaysheet.php [L]
+RewriteRule ^reports$ /user/reports.php [L]
+RewriteRule ^report_pf_uan_ecr_page$ /user/report_pf_uan_ecr_page.php [L]
+
+
+RewriteRule ^sal_calc$ /user/sal_calc.php [L]
+RewriteRule ^report_pf_uan_ecr_page1$ /user/report_pf_uan_ecr_page1.php [L]
+RewriteRule ^sal_calc_jayesh$ /user/sal_calc_comp11.php [L]
+
+
+RewriteRule ^search_advancetype$ /user/search-advancetype.php [L]
+RewriteRule ^search_bank$ /user/search-bank.php [L]
+RewriteRule ^search_bank1$ /user/search-bank1.php [L]
+RewriteRule ^search_client$ /user/search-client.php [L]
+RewriteRule ^search_deduct$ /user/search-deduct.php [L]
+RewriteRule ^search_dept$ /user/search-dept.php [L]
+
+RewriteRule ^search_designation$ /user/search-designation.php [L]
+RewriteRule ^search_income$ /user/search-income.php [L]
+RewriteRule ^search_leavetype$ /user/search-leavetype.php [L]
+RewriteRule ^search_loc$ /user/search-loc.php [L]
+RewriteRule ^search_payscale$ /user/search-payscale.php [L]
+
+
+RewriteRule ^search_qualification$ /user/search-qualification.php [L]
+RewriteRule ^select_current_bonus_year$ /user/select_current_bonus_year.php [L]
+RewriteRule ^sendinmailpdf$ /user/sendinmailpdf.php [L]
+RewriteRule ^sessionclientno$ /user/sessionclientno.php [L]
+RewriteRule ^show_adv_dates$ /user/show_adv_dates.php [L]
+
+
+RewriteRule ^statememt_bonus_calculation$ /user/statememt-bonus-calculation.php [L]
+RewriteRule ^store_session$ /user/store_session.php [L]
+RewriteRule ^store_session_bonus$ /user/store_session_bonus.php [L]
+RewriteRule ^test_index$ /user/test_index.php [L]
+RewriteRule ^tran_calculation$ /user/tran-calculation.php [L]
+
+
+RewriteRule ^tran_day_process$ /user/tran-day-process.php [L]
+RewriteRule ^tran_day$ /user/tran-day.php [L]
+RewriteRule ^datewise-details$ /user/datewise-details.php [L]
+RewriteRule ^display-datewise-details$ /user/display-datewise-details.php [L]
+RewriteRule ^datewise_document_details_process$ /user/datewise_document_details_process.php [L]
+
+
+
+RewriteRule ^tran_leave_process$ /user/tran-leave-process.php [L]
+RewriteRule ^tran_leave$ /user/tran-leave.php [L]
+
+
+RewriteRule ^transactions$ /user/transactions.php [L]
+RewriteRule ^tran_monthly_closing$ /user/tran_monthly_closing.php [L]
+RewriteRule ^update_advances_process$ /user/update-advances-process.php [L]
+RewriteRule ^update_all_emp_deduct_process$ /user/update-all-emp-deduct-process.php [L]
+RewriteRule ^update_all_emp_income_process$ /user/update-all-emp-income-process.php [L]
+
+RewriteRule ^update_all_emp_process$ /user/update-all-emp-process.php [L]
+RewriteRule ^update_comp_details_process$ /user/update-comp-details-process.php [L]
+RewriteRule ^update_deduct_process$ /user/update-deduct-process.php [L]
+RewriteRule ^update_employee_process$ /user/update-employee-process.php [L]
+RewriteRule ^update_income_process$ /user/update-income-process.php [L]
+
+
+RewriteRule ^update_intax_80c_process$ /user/update-intax-80c-process.php [L]
+RewriteRule ^update_intax_allow_process$ /user/update-intax-allow-process.php [L]
+RewriteRule ^update_intax_chapter_process$ /user/update-intax-chapter-process.php [L]
+RewriteRule ^update_intax_income_process$ /user/update-intax-income-process.php [L]
+RewriteRule ^update_intax_otherinfo_process$ /user/update-intax-otherinfo-process.php [L]
+
+
+RewriteRule ^update_it_deposit_details_process$ /user/update-it-deposit-details-process.php [L]
+RewriteRule ^update_leave_process$ /user/update-leave-process.php [L]
+RewriteRule ^update_mast_advancetype_process$ /user/update-mast-advancetype-process.php [L]
+RewriteRule ^update_mast_bank-process$ /user/update-mast-bank-process.php [L]
+RewriteRule ^update_mast_deductionheads_process$ /user/update-mast-deductionheads-process.php [L]
+
+RewriteRule ^update_mast_department_process$ /user/update-mast-department-process.php [L]
+RewriteRule ^update_mast_designation_process$ /user/update-mast-designation-process.php [L]
+RewriteRule ^update_mast_incomehead_process$ /user/update-mast-incomehead-process.php [L]
+RewriteRule ^update_mast_leavetype_process$ /user/update-mast-leavetype-process.php [L]
+RewriteRule ^update_mast_location_process$ /user/update-mast-location-process.php [L]
+
+RewriteRule ^update_mast_payscalecode_process$ /user/update-mast-payscalecode-process.php [L]
+RewriteRule ^update_mast_qualification_process$ /user/update-mast-qualification-process.php [L]
+RewriteRule ^update_rate$ /user/update-rate.php [L]
+
+RewriteRule ^update_session_for_bonus$ /user/update-session-for-bonus.php [L]
+RewriteRule ^update_advances$ /user/update_advances.php [L]
+
+
+RewriteRule ^/add_cheque_details$ /reports/add-cheque-details.php [L]
+RewriteRule ^add_leave_cheque_details$ /reports/add-leave-cheque-details.php [L]
+RewriteRule ^add_leave_process$ /reports/add-leave-process.php [L]
+RewriteRule ^bank_leave_statement$ /reports/bank-leave-statement.php [L]
+RewriteRule ^check_leave_print_pre$ /reports/check-leave-print-pre.php [L]
+
+RewriteRule ^export_bank_neft_bonus_format$ /reports/export-bank-neft-bonus-format.php [L]
+RewriteRule ^export_bank_transfer_format$ /reports/export-bank-transfer-format.php [L]
+RewriteRule ^export_emerson_transfer_format$ /reports/export-emerson-transfer-format.php [L]
+RewriteRule ^export_leave_bank-neft_format$ /reports/export-leave-bank-neft-format.php [L]
+
+RewriteRule ^export_leave_bank_transfer_format$ /reports/export-leave-bank-transfer-format.php [L]
+RewriteRule ^export_leave_emerson_transfer_format$ /reports/export-leave-emerson-transfer-format.php [L]
+RewriteRule ^leave_chklistdtl$ /reports/leave-chklistdtl.php [L]
+RewriteRule ^generate_temp_paysheet$ /reports/generate_temp_paysheet.php [L]
+RewriteRule ^leave_encashment_details$ /reports/leave-encashment-details.php [L]
+
+RewriteRule ^export_leave_bank_transfer_format$ /reports/export-leave-bank-transfer-format.php [L]
+RewriteRule ^export_leave_emerson_transfer_format$ /reports/export-leave-emerson-transfer-format.php [L]
+RewriteRule ^generate_temp_paysheet$ /reports/generate_temp_paysheet.php [L]
+RewriteRule ^leave_chklistdtl$ /reports/leave-chklistdtl.php [L]
+RewriteRule ^leave_encashment_details$ /reports/leave-encashment-details.php [L]
+
+RewriteRule ^leave_encashment$ /reports/leave-encashment.php [L]
+RewriteRule ^leave_reports$ /reports/leave-reports.php [L]
+RewriteRule ^opening_balance$ /reports/opening-balance.php [L]
+RewriteRule ^opening_balancelist$ /reports/opening_balancelist.php [L]
+RewriteRule ^payslip$ /reports/payslip.php [L]
+
+RewriteRule ^print_dpayslip1$ /reports/print-dpayslip1.php [L]
+RewriteRule ^print_payslip1$ /reports/print-payslip1.php [L]
+RewriteRule ^printheader$ /reports/printheader.php [L]
+RewriteRule ^printheader1$ /reports/printheader1.php [L]
+
+RewriteRule ^printheader2$ /reports/printheader2.php [L]
+RewriteRule ^printheader3$ /reports/printheader3.php [L]
+RewriteRule ^printheader_leave$ /reports/printheader_leave.php [L]
+RewriteRule ^report_adv_employee_page$ /reports/report-adv-employee-page.php [L]
+RewriteRule ^report_advlist_page$ /reports/report-advlist-page.php [L]
+
+RewriteRule ^report_bank_bonus$ /reports/report-bank-bonus.php [L]
+RewriteRule ^report_bank_deduction_letter$ /reports/report-bank-deduction-letter.php [L]
+RewriteRule ^report_bank_emerson$ /reports/report-bank-emerson.php [L]
+RewriteRule ^report_bank_salary$ /reports/report-bank-salary.php [L]
+
+
+RewriteRule ^report_bonus_bank_emerson$ /reports/report-bonus-bank-emerson.php [L]
+RewriteRule ^report_bank_statement$ /reports/report-bank-statement.php [L]
+RewriteRule ^report_bank_salary_list$ /reports/report-bank-salary_list.php [L]
+RewriteRule ^report_bonus_register$ /reports/report-bonus-register.php [L]
+RewriteRule ^report_bonus_statement$ /reports/report-bonus-statement.php [L]
+
+RewriteRule ^report_cheque_lists$ /reports/report-cheque-list.php [L]
+RewriteRule ^report_contribution_esi_statement_page$ /reports/report-contribution-esi-statement-page.php [L]
+RewriteRule ^report_esi_statement_page$ /reports/report-esi-statement-page.php [L]
+RewriteRule ^report_esi_statement_page1$ /reports/report-esi-statement-page1.php [L]
+
+RewriteRule ^report_form3a_page$ /reports/report-form3a-page.php [L]
+RewriteRule ^report_form16_page$ /reports/report-form16-page.php [L]
+RewriteRule ^report_esi_summery_statement_page$ /reports/report-esi-summery-statement-page.php [L]
+RewriteRule ^report_form20-_age$ /reports/report-form20-page.php [L]
+RewriteRule ^report_gratuity$ /reports/report-gratuity.php [L]
+
+RewriteRule ^report_gst_bill$ /reports/report-gst-bill.php [L]
+RewriteRule ^report_gst_statement_page$ /reports/report-gst-statement-page.php [L]
+RewriteRule ^report_gst_statement$ /reports/report-gst-statement.php [L]
+RewriteRule ^report_leave_bank_emerson$ /reports/report-leave-bank-emerson.php [L]
+RewriteRule ^report_leave_bank-salary$ /reports/report-leave-bank-salary.php [L]
+
+RewriteRule ^report_leave_bank_statement$ /reports/report-leave-bank-statement.php [L]
+RewriteRule ^report_leave_cheque_list$ /reports/report-leave-cheque-list.php [L]
+RewriteRule ^report_leave_cheque_printing$ /reports/report-leave-cheque-printing.php [L]
+RewriteRule ^report_leave_emerson_transfer$ /reports/report-leave-emerson-transfer.php [L]
+RewriteRule ^report_leave_emerson$ /reports/report-leave-emerson.php [L]
+
+RewriteRule ^report_leave-list_1$ /reports/report-leave-list-1.php [L]
+RewriteRule ^report_leave-neft_letter$ /reports/report-leave-neft-letter.php [L]
+RewriteRule ^report_leave_neft$ /reports/report-leave-neft.php [L]
+RewriteRule ^report_leave_register$ /reports/report-leave-register.php [L]
+RewriteRule ^report_leave_statement$ /reports/report-leave-statement.php [L]
+
+RewriteRule ^report_leave_transfer$ /reports/report-leave-transfer.php [L]
+RewriteRule ^report_leave_voucher$ /reports/report-leave-voucher.php [L]
+RewriteRule ^report_letters_appoinment_page$ /reports/report-letters-appoinment-page.php [L]
+RewriteRule ^report_letters_blank-appoinment_page$ /reports/report-letters-blank-appoinment-page.php [L]
+
+RewriteRule ^report_letters_blank_page$ /reports/report-letters-blank-page.php [L]
+RewriteRule ^report_letters_experience_page$ /reports/report-letters-experience-page.php [L]
+RewriteRule ^report_letters_resigation_acceptance_page$ /reports/report-letters-resigation-acceptance-page.php [L]
+RewriteRule ^report_lwf_statement_page$ /reports/report-lwf-statement-page.php [L]
+RewriteRule ^report_lwf_summary_page$ /reports/report-lwf-summary-page.php [L]
+
+RewriteRule ^report_mis_esi_pf_page$ /reports/report-mis-esi-pf-page.php [L]
+RewriteRule ^report_muster_book$ /reports/report-muster-book.php [L]
+RewriteRule ^report_neft_letter_bonus$ /reports/report-neft-letter-bonus.php [L]
+RewriteRule ^report_neft_letter$ /reports/report-neft-letter.php [L]
+RewriteRule ^report_paysheet_page$ /reports/report-paysheet-page.php [L]
+
+RewriteRule ^report_paysheet_printing$ /reports/report-paysheet-printing.php [L]
+RewriteRule ^report_payslip_page1$ /reports/report-payslip-page.php [L]
+RewriteRule ^report_payslip_send_email$ /reports/report-payslip-send-email.php [L]
+RewriteRule ^report_periodwise_random_payslip_page$ /reports/report-periodwise-random-payslip-page.php [L]
+RewriteRule ^report_pf_code-summary$ /reports/report-pf-code-summary.php [L]
+
+RewriteRule ^report_pf_form9_page$ /reports/report-pf-form9-page.php [L]
+RewriteRule ^report_pf_salary_summary_page$ /reports/report-pf-salary-summary-page.php [L]
+RewriteRule ^report_pf_stat_summary-page$ /reports/report-pf-stat-summary-page.php [L]
+RewriteRule ^report_pf_statement_page$ /reports/report-pf-statement-page.php [L]
+RewriteRule ^report_pt_page$ /reports/report-pt-page.php [L]
+
+RewriteRule ^report_pt_summary_page$ /reports/report-pt-summary-page.php [L]
+RewriteRule ^report_sal_summary_page$ /reports/report-sal-summary-page.php [L]
+RewriteRule ^report_society_letter$ /reports/report-society-letter.php [L]
+RewriteRule ^report_tax-invoice_page$ /reports/report-tax-invoice-page.php [L]
+RewriteRule ^report_without_esi_summery_statement_page$ /reports/report-without-esi-summery-statement-page.php [L]
+
+RewriteRule ^reportpf_summary$ /reports/reportpf-summary.php [L]
+RewriteRule ^wage_sheet$ /reports/wage_sheet.php [L]
+RewriteRule ^wage_sheet1$ /reports/wage_sheet1.php [L]
+RewriteRule ^getpassword$ /forgot_password_mail_send.php [L]
+RewriteRule ^change_password/([^/]*)$ /change-password.php?authkey=$1 [L]
+RewriteRule ^pass-change$ /change-password-process.php [L]
+RewriteRule ^/([^/]*)$ /index.php?authkey=$1 [L]
+RewriteRule ^bonus_statement$ /user/bonus-statement.php [L]
+RewriteRule ^import_transactions_days_process$ /user/import-transactions-days-process.php [L]
+
+RewriteRule ^report_pf$ /user/report-pf.php [L]
+RewriteRule ^report_esi_export$ /user/report-esi-export.php [L]
+RewriteRule ^report_pf_uan_ecr$ /user/report-pf_uan_ecr.php [L]
+RewriteRule ^report_pt_summary /user/report-pt-summary.php [L]
+
+
+#ErrorDocument 404 /404.php

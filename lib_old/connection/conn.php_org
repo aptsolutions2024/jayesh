@@ -1,0 +1,10 @@
+<?php
+/*$config = array('DBUSER'=>'aptsolution',
+                'DBPASS'=>'sR91(o^o_sj}e',
+                'DBHOST'=>'localhost',
+                'DBNAME'=> 'salary_demo');*/	
+$config = array('DBUSER'=>'testdemo1',
+                'DBPASS'=>'testdemo1',
+                'DBHOST'=>'localhost',
+                'DBNAME'=> 'salarydb');
+	?> 
